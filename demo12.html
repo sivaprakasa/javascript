@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Using scope</h1>
+    <script>
+        const name='hi prakasam';              //gobal scope
+        function myfun()
+        {
+            const name='hello prakasam';      // name is identifer
+            if(true)
+            {
+                const name='how are you';
+                document.write(name);       // block scope method
+            }
+            document.write(name);           /*function scope*/
+        }
+        document.write(name);
+        myfun()         //function called method
+    </script>
+</body>
+</html>

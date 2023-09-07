@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Date and Time</title>
+	</head>
+	<body>
+		<h1>TIME</h1>
+		<p id="p1"></p>
+		<button onclick="start()">start</button>
+		<button onclick="stop()">stop</button>
+
+		<!--using script-->
+		<script>
+			function changecolor() {
+				date = new Date();
+				hour = date.getHours();
+				minute = date.getMinutes();
+				second = date.getSeconds();
+				timing = date.toLocaleTimeString();
+				x = document.getElementById("p1");
+				x.innerHTML = timing;
+
+				if (second % 2 == 0) {
+					x.style.color = "red";
+				} else {
+					x.style.color = "blue";
+				}
+			}
+
+            //button function
+            function start()
+            {
+                y = setInterval(changecolor,1000);
+            }
+            function stop()
+            {
+                clearInterval(y);
+            }
+		</script>
+	</body>
+</html>

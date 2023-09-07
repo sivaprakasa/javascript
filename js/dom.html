@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wapper">
+        <div id="inputval">
+            <h1>Convert cm value to incval</h1>
+            <input type="text" id="input" placeholder="Enter a cm value">
+        </div>
+        <div>
+            <button type="button" onclick="convert()">Convert to cm</button>
+        </div>
+        <div id="result">
+
+        </div>
+    </div>
+    <script>
+        function convert() {
+            const cmval=Number(document.getElementById('input').value)
+        const incval=cmval/2.54
+        const result=document.getElementById('result')
+        result.innerHTML=incval.toFixed(3)
+        }
+        
+    </script>
+</body>
+</html>

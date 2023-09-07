@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>select by tag name</title>
+</head>
+<body>
+    <h1>select tag name</h1>
+    <input placeholder="Enter a name"><br><br>
+    <input placeholder="Enter a age"><br><br>
+    <input placeholder="Enter a city"><br><br>
+    <button onclick="check()">submit</button>
+    <p></p>
+    <p></p>
+    <p></p>
+    <script>
+        function check()
+        {
+            box = document.getElementsByTagName("input");
+            data = document.getElementsByTagName("p");
+           /* data[0].innerHTML = box[0].value;
+            data[1].innerHTML = box[1].value;
+            data[2].innerHTML = box[2].value;*/
+
+            //using for loop
+            //0<3
+            for(i=0;i<box.length;i++)
+            {
+                data[i].innerHTML = box[i].value;
+                data[i].style.color = "pink";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input
+        {
+            width: 40%;
+            height: 40px;
+        }
+        button
+        {
+            width: 40%;
+            height: 40px;
+            background-color: blue;
+            color: white;
+        }
+        h1, p
+        {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>select tag</h1>
+    <input id="from" placeholder="Enter data"><br>
+    <button onclick="check()">submit</button>
+    <p id="to"></p>
+
+    <script>
+        function check()
+        {
+            box = document.getElementById("from").value;
+            document.getElementById("to").innerHTML = box;
+        }
+    </script>
+</body>
+</html>
